@@ -15,5 +15,6 @@
     <string name="Success">was successful</string>
     <string name="Error">An Error Occurred</string>
     <string name="again">TRY AGAIN</string>
+    <string name="okay">OK</string>
 
 </resources>

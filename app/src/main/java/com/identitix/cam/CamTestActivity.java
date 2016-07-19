@@ -58,7 +58,7 @@ public class CamTestActivity extends Activity {
 //	private static final String SERVER = "http://192.168.43.251:52531/api/Main";
 //	private static final String SERVER = "http://192.168.43.251:52531/api/Find";
  //   private static final String SERVER = "http://172.15.167.114:1243/api/Find";
-    private static final String SERVER = "http://192.168.1.153:1243/api/Find";
+    private static final String SERVER = "http://192.168.43.216:1243/api/Find";
 	Preview preview;
 	Button buttonClick;
 	EditText pinNumber;
@@ -270,7 +270,9 @@ public class CamTestActivity extends Activity {
 					String responseStr = EntityUtils.toString(response.getEntity());
 					//String responseStr = response.getEntity().getContent().toString();
 					if(responseStr.equals("NotFound!")) {
-
+						Intent in  = new Intent(getApplicationContext(),Error.class);
+						startActivity(in);
+						finish();
 					}
 					else {
 						Bundle userData = new Bundle();
@@ -284,11 +286,6 @@ public class CamTestActivity extends Activity {
 				}
 				else {
 					Intent in  = new Intent(getApplicationContext(),Error.class);
-					/*camera.stopPreview();
-					//preview.setCamera(null);
-					camera.release();
-					camera = null;
-					*/
 					startActivity(in);
 					finish();
 				}

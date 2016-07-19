@@ -52,6 +52,7 @@
         android:layout_alignLeft="@+id/editText3"
         android:layout_alignStart="@+id/editText3"
         android:background="#ff3d59"
-        android:textColor="#faf7f7" />
+        android:textColor="#faf7f7"
+        android:textSize="16dp" />
 
 </RelativeLayout>
