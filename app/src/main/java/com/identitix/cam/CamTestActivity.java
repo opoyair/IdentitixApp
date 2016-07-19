@@ -99,6 +99,9 @@ public class CamTestActivity extends Activity {
 					public void onClick(View v) {
 		////				preview.camera.takePicture(shutterCallback, rawCallback, jpegCallback);
 					pin = pinNumber.getText().toString();
+					Camera.Parameters params = camera.getParameters();
+					params.setRotation(90);
+					camera.setParameters(params);
 					camera.takePicture(shutterCallback, rawCallback, jpegCallback);
 					}
 				});
