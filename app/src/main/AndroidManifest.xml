@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.identitix.cam"
     android:versionCode="1"
-    android:versionName="1.0">
+    android:versionName="1.0" >
 
     <uses-sdk android:minSdkVersion="11" />
 
@@ -14,18 +14,19 @@
 
     <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <android:uses-permission android:name="android.permission.INTERNET" />
+
     <!--
 uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /
     -->
     <application
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name">
-
+        android:label="@string/app_name" >
         <activity
-            android:name="com.identitix.cam.LogoActivity"
+            android:name=".LogoActivity"
             android:label="@string/app_name"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,10 +34,11 @@ uses-permission android:name="android.permission.INTERNET" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.identitix.cam.CamTestActivity"
-            android:screenOrientation="landscape">
+            android:name=".CamTestActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Success" />
+        <activity android:name=".Error" >
         </activity>
-
     </application>
 
 </manifest>

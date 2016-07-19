@@ -2,19 +2,37 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="#010101">
+
+    <Button
+        android:id="@+id/btnCapture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@drawable/oval_3"
+        />
+
+    <EditText
+        android:layout_width="258dp"
+        android:layout_height="45dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:hint="Enter Pin Number"
+        android:gravity="center"
+        android:background="@drawable/pin_bg"
+        android:textColorHint="#9B9B9B"
+        android:focusableInTouchMode="true"
+        android:focusable="true" />
 
     <SurfaceView
         android:id="@+id/surfaceView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <!-- Button
-        android:id="@+id/btnCapture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/round_button"
-        android:text="@string/btn_capture" /-->
+        android:layout_height="341dp"
+        android:layout_gravity="center" />
 
 </FrameLayout>

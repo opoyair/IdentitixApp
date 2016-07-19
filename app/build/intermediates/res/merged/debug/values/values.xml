@@ -137,6 +137,10 @@
     <item name="split_action_bar" type="id"/>
     <item name="up" type="id"/>
     <integer name="abc_max_action_buttons">2</integer>
+    <string name="Error">An Error Occurred</string>
+    <string name="Payment">your payment of XXX</string>
+    <string name="Success">was successful</string>
+    <string name="Users">Hi User,</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
     <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>
@@ -153,6 +157,7 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="again">TRY AGAIN</string>
     <string name="app_name">Identitix</string>
     <string name="btn_capture">Click</string>
     <string name="camera_not_found">No camera harware found</string>

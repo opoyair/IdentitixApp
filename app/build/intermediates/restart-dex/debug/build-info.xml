@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
     abi="armeabi-v7a,armeabi"
-    api-level="18"
-    density="xhdpi"
+    api-level="23"
+    density="xxhdpi"
     format="7"
-    timestamp="2402718438095307"
-    token="3008510815163968547" >
+    timestamp="189223242450876"
+    token="3042621431825260312" >
 
     <task
         name="javac"
-        duration="524" />
+        duration="394" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="373" />
+        duration="63" />
     <task
         name="verifier"
-        duration="70" />
+        duration="14" />
 
     <artifact
         location="C:\Users\opoyair\Desktop\IdentitixApp\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
-    <build timestamp="2402718438095307" >
+    <build timestamp="189223242450876" >
         <artifact
             location="C:\Users\opoyair\Desktop\IdentitixApp\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />

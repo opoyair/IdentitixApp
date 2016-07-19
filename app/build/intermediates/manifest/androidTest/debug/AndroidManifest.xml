@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.identitix.cam.test">
+    package="com.example.cam.test">
 
     <uses-sdk android:minSdkVersion="11" android:targetSdkVersion="21" />
 
