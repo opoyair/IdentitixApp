@@ -57,7 +57,8 @@ public class CamTestActivity extends Activity {
 	private static final String TAG = "CamTestActivity";
 //	private static final String SERVER = "http://192.168.43.251:52531/api/Main";
 //	private static final String SERVER = "http://192.168.43.251:52531/api/Find";
-    private static final String SERVER = "http://172.15.167.114:1243/api/Find";
+ //   private static final String SERVER = "http://172.15.167.114:1243/api/Find";
+    private static final String SERVER = "http://192.168.1.153:1243/api/Find";
 	Preview preview;
 	Button buttonClick;
 	EditText pinNumber;
@@ -122,6 +123,7 @@ public class CamTestActivity extends Activity {
 		int numCams = Camera.getNumberOfCameras();
 		if(numCams > 0){
 			try{
+
 				camera = Camera.open(0);
 				camera.startPreview();
 				preview.setCamera(camera);
@@ -262,8 +264,8 @@ public class CamTestActivity extends Activity {
 					response = null;
 				}
 				if (response != null && response.getStatusLine().getStatusCode()== HttpsURLConnection.HTTP_OK){
-					//String responseStr = EntityUtils.toString(response.getEntity());
-					String responseStr = response.getEntity().getContent().toString();
+					String responseStr = EntityUtils.toString(response.getEntity());
+					//String responseStr = response.getEntity().getContent().toString();
 					if(responseStr.equals("NotFound!")) {
 
 					}

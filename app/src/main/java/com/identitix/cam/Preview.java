@@ -99,6 +99,10 @@ class Preview extends ViewGroup implements SurfaceHolder.Callback {
         // to draw.
         try {
             if (mCamera != null) {
+                mCamera.setDisplayOrientation(90);
+                Camera.Parameters params = mCamera.getParameters();
+                params.setRotation(90);
+                mCamera.setParameters(params);
                 mCamera.setPreviewDisplay(holder);
             }
         } catch (IOException exception) {

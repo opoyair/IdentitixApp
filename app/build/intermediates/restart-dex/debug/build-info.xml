@@ -4,27 +4,27 @@
     api-level="23"
     density="xxhdpi"
     format="7"
-    timestamp="189223242450876"
+    timestamp="199527921945993"
     token="3042621431825260312" >
 
     <task
         name="javac"
-        duration="394" />
+        duration="302" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="63" />
+        duration="356" />
     <task
         name="verifier"
-        duration="14" />
+        duration="120" />
 
     <artifact
         location="C:\Users\opoyair\Desktop\IdentitixApp\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
-    <build timestamp="189223242450876" >
+    <build timestamp="199527921945993" >
         <artifact
             location="C:\Users\opoyair\Desktop\IdentitixApp\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
