@@ -16,5 +16,7 @@
     <string name="Error">An Error Occurred</string>
     <string name="again">TRY AGAIN</string>
     <string name="okay">OK</string>
+    <string name="q_ask">Hi User, one more thing:</string>
+    <string name="real_q">Which photo is of XXXX?</string>
 
 </resources>

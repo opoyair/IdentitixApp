@@ -162,6 +162,9 @@
     <string name="btn_capture">Click</string>
     <string name="camera_not_found">No camera harware found</string>
     <string name="hello">Hello World, CamTestActivity!</string>
+    <string name="okay">OK</string>
+    <string name="q_ask">Hi User, one more thing:</string>
+    <string name="real_q">Which photo is of XXXX?</string>
     <string name="take_photo_help">Touch anywhere on screen to take picture</string>
     <style name="Base.TextAppearance.AppCompat" parent="android:TextAppearance">
         <item name="android:textColor">?android:textColorPrimary</item>

@@ -58,7 +58,7 @@ public class CamTestActivity extends Activity {
 //	private static final String SERVER = "http://192.168.43.251:52531/api/Main";
 //	private static final String SERVER = "http://192.168.43.251:52531/api/Find";
  //   private static final String SERVER = "http://172.15.167.114:1243/api/Find";
-    private static final String SERVER = "http://192.168.43.216:1243/api/Find";
+    private static final String SERVER = "http://172.15.167.114:1243/api/Find";
 	Preview preview;
 	Button buttonClick;
 	EditText pinNumber;
@@ -261,15 +261,19 @@ public class CamTestActivity extends Activity {
 				httpPost.setHeader("Content-type", "application/json");
 				HttpResponse response;
 				try {
-					response = httpclient.execute(httpPost);
+					 response = httpclient.execute(httpPost);
 				}
 				catch(Exception e) {
 					response = null;
 				}
 				if (response != null && response.getStatusLine().getStatusCode()== HttpsURLConnection.HTTP_OK){
 					String responseStr = EntityUtils.toString(response.getEntity());
-					//String responseStr = response.getEntity().getContent().toString();
-					if(responseStr.equals("NotFound!")) {
+					if(responseStr.compareTo("Dany Reiss") == 0 || responseStr.compareTo("Dany")== 0 ){
+						Intent in  = new Intent(getApplicationContext(),Q.class);
+						startActivity(in);
+						finish();
+					}
+					else if(responseStr.compareTo("NotFound!") == 0 || responseStr.toLowerCase().contains("exception") ) {
 						Intent in  = new Intent(getApplicationContext(),Error.class);
 						startActivity(in);
 						finish();
