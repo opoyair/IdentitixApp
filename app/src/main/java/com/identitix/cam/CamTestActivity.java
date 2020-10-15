@@ -1,7 +1,7 @@
 package com.identitix.cam;
 
 /**
- * @author Jose Davis Nidhin
+ * @author Yair opo
  */
 
 import java.io.ByteArrayOutputStream;
@@ -57,8 +57,7 @@ public class CamTestActivity extends Activity {
 	private static final String TAG = "CamTestActivity";
 //	private static final String SERVER = "http://192.168.43.251:52531/api/Main";
 //	private static final String SERVER = "http://192.168.43.251:52531/api/Find";
- //   private static final String SERVER = "http://172.15.167.114:1243/api/Find";
-    private static final String SERVER = "http://172.15.167.114:1243/api/Find";
+    	private static final String SERVER = "http://172.15.167.114:1243/api/Find";
 	Preview preview;
 	Button buttonClick;
 	EditText pinNumber;
@@ -236,23 +235,20 @@ public class CamTestActivity extends Activity {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-
-			////
+			
 			Bitmap bm = BitmapFactory.decodeFile(file.getPath());
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
-			bm.compress(Bitmap.CompressFormat.JPEG, 100, baos); //bm is the bitmap object
-			byte[] b = baos.toByteArray();
-			String encodedImage = Base64.encodeToString(b, Base64.DEFAULT);
-			////
+			bm.compress(Bitmap.CompressFormat.JPEG, 100, baos); 
+			byte[] byteImage = baos.toByteArray();
+			String encodedImage = Base64.encodeToString(byteImage, Base64.DEFAULT);
+			
 
 			JSONObject json = new JSONObject();
 			try {
-				json.put("GroupID", "steel_rabbits");
+				json.put("GroupID", "Identitx");
 				json.put("Pin",pin);
-				//json.put("Image",b);
 				json.put("Image",encodedImage);
-				//json.put("Image", Base64.encode(bytes,0));
-
+				//call post to server to send json with picture
 				StringEntity se = new StringEntity(json.toString());
 				HttpClient httpclient = new DefaultHttpClient();
 				HttpPost httpPost = new HttpPost(this.server);
@@ -268,7 +264,7 @@ public class CamTestActivity extends Activity {
 				}
 				if (response != null && response.getStatusLine().getStatusCode()== HttpsURLConnection.HTTP_OK){
 					String responseStr = EntityUtils.toString(response.getEntity());
-					if(responseStr.compareTo("Dany Reiss") == 0 || responseStr.compareTo("Dany")== 0 ){
+					if(responseStr.compareTo("Dany Reiss") == 0 || responseStr.compareTo("Dany") == 0 ){
 						Intent in  = new Intent(getApplicationContext(),Q.class);
 						startActivity(in);
 						finish();
@@ -293,33 +289,11 @@ public class CamTestActivity extends Activity {
 					startActivity(in);
 					finish();
 				}
-			} catch (JSONException e) {
+			} catch (JSONException|UnsupportedEncodingException|ClientProtocolException|IOException ex) {
 				e.printStackTrace();
-			} catch (UnsupportedEncodingException e) {
-				e.printStackTrace();
-			} catch (ClientProtocolException e) {
-				e.printStackTrace();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+			} 
 
-             /*
-			try {
-				HttpClient httpclient = new DefaultHttpClient();
-
-				HttpPost httppost = new HttpPost(this.server);
-
-				InputStreamEntity reqEntity = new InputStreamEntity(
-						new FileInputStream(file), -1);
-				reqEntity.setContentType("binary/octet-stream");
-				reqEntity.setChunked(true); // Send in multiple parts if needed
-				httppost.setEntity(reqEntity);
-				HttpResponse response = httpclient.execute(httppost);
-				//Do something with response...
-
-			} catch (Exception e) {
-				// show error
-			}*/
+             
 			finally {
 			}
 			return null;
